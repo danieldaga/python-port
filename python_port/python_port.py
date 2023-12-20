@@ -13,7 +13,7 @@ def index() -> rx.Component:
           navbar(),
           header(),
           links(),
-          footer()
+          footer(),
           )
 
 

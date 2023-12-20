@@ -2,6 +2,7 @@ import reflex as rx
 
 class FormErrorState(rx.State):
     name: str
+    email:str
 
     @rx.var
     def is_error(self) -> bool:
@@ -11,7 +12,7 @@ class FormErrorState(rx.State):
 def form_footer() -> rx.Component:
     return rx.form_control(
             rx.input(
-                placeholder="name",
+                placeholder="Name",
                 on_blur=FormErrorState.set_name,
             ),
             rx.cond(
@@ -21,6 +22,17 @@ def form_footer() -> rx.Component:
                 ),
                 rx.form_helper_text("Enter name"),
             ),
+            rx.input(
+                placeholder="Email",
+                on_blur=FormErrorState.set_email,
+            ),
+            rx.cond(
+                FormErrorState.is_error,
+                rx.form_error_message(
+                    "Email should be more than four characters"
+                ),
+                rx.form_helper_text("Enter name"),
+            ),
             is_invalid=FormErrorState.is_error,
             is_required=True,
-        ),
+        )
