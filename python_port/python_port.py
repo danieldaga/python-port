@@ -2,6 +2,8 @@ import reflex as rx
 from python_port.components.navbar import navbar
 from python_port.views.header.header import header
 from python_port.views.links.links import links
+from python_port.components.footer import footer
+
 
 class State(rx.State):
     pass
@@ -11,7 +13,7 @@ def index() -> rx.Component:
           navbar(),
           header(),
           links(),
-        
+          footer()
           )
 
 
