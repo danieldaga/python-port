@@ -7,6 +7,7 @@ class FormErrorState(rx.State):
     def is_error(self) -> bool:
         return len(self.name) <= 3
 
+
 def form_footer() -> rx.Component:
     return rx.form_control(
             rx.input(
