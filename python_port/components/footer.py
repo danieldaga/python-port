@@ -15,7 +15,7 @@ def footer() -> rx.Component:
         rx.text(
             "♠ Diseñado con pasión y codificado con creatividad. ♠",
         ),
-            width="full",
+            # width="full",
             position="sticky",
             bg="#314299",
             color="#00BBF9",

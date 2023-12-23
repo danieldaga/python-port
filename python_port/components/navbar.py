@@ -6,7 +6,7 @@ def navbar() -> rx.Component:
             "Daniel García Developer",
             height="40px",
             ),
-            width="full",
+            # width="full",
             position="sticky",
             bg="#314299",
             color="#00BBF9",
