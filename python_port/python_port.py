@@ -30,4 +30,4 @@ app = rx.App(
      style=styles.BASE_STYLE
 )
 app.add_page(index)
-app.compile()
+# app.compile() //no es necesario con la nueva actualizacion de reflex 

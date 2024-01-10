@@ -1,5 +1,5 @@
 *.db
 *.py[cod]
+.md
 .web
 __pycache__/
-.md
